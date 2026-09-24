@@ -1,41 +1,41 @@
 # UluP Spaces — Quick Capture
 
-Estensione per Chrome (Manifest V3) che salva qualsiasi pagina web come nodo in uno dei tuoi progetti su [UluP Spaces](https://ulupspaces.com), in un click — usando la [REST API pubblica](https://ulupstudio.com/developers) di UluP Spaces.
+A Chrome extension (Manifest V3) that saves any web page as a node in one of your [UluP Spaces](https://ulupspaces.com) projects, in one click — powered by UluP Spaces' [public REST API](https://ulupstudio.com/developers).
 
-## Cosa fa
+## What it does
 
-- Legge il titolo della pagina che stai guardando e lo propone come nome del nodo.
-- Scegli in quale progetto salvarlo e un colore.
-- Se vuoi, aggiunge anche il link della pagina come task dentro il nodo appena creato.
-- Tutto passa dalla REST API pubblica (`https://www.ulupspaces.com/api/v1`) con la tua chiave personale — nessun server intermedio, nessun dato che passa da altre parti.
+- Reads the title of the page you're on and suggests it as the node name.
+- You pick which project to save it into, and a color.
+- Optionally, it also adds the page's link as a task inside the newly created node.
+- Everything goes through the public REST API (`https://www.ulupspaces.com/api/v1`) with your own personal key — no middle server, nothing routed anywhere else.
 
-## Installazione (da sorgente)
+## Installation (from source)
 
-L'estensione non è ancora sul Chrome Web Store, quindi va caricata "unpacked":
+The extension isn't on the Chrome Web Store yet, so it needs to be loaded "unpacked":
 
-1. Scarica o clona questo repo.
-2. Apri `chrome://extensions` in Chrome.
-3. Attiva **Modalità sviluppatore** (in alto a destra).
-4. Clicca **Carica estensione non pacchettizzata** e seleziona la cartella del repo.
+1. Download or clone this repo.
+2. Open `chrome://extensions` in Chrome.
+3. Turn on **Developer mode** (top right).
+4. Click **Load unpacked** and select the repo folder.
 
-## Configurazione
+## Setup
 
-1. Vai su [UluP Spaces → Profilo → REST API & SDK](https://ulupspaces.com/?view=profile) e genera una chiave API.
-2. Clic destro sull'icona dell'estensione → **Opzioni**.
-3. Incolla la chiave e salva. Resta salvata solo in locale, nel tuo browser (`chrome.storage.local`) — non viene mai inviata da nessun'altra parte se non alla REST API di UluP Spaces.
+1. Go to [UluP Spaces → Profile → REST API & SDK](https://ulupspaces.com/?view=profile) and generate an API key.
+2. Right-click the extension icon → **Options**.
+3. Paste the key and save. It's stored locally only, in your browser (`chrome.storage.local`) — it's never sent anywhere other than the UluP Spaces REST API.
 
-## Come si usa
+## Usage
 
-Apri il popup dall'icona dell'estensione su qualsiasi pagina, scegli il progetto, controlla/modifica il nome del nodo, scegli un colore e salva. Fatto.
+Open the popup from the extension icon on any page, pick a project, check/edit the node name, choose a color, and save. Done.
 
 ## Stack
 
-Vanilla JS, HTML e CSS — nessuna dipendenza, nessun bundler. Manifest V3.
+Vanilla JS, HTML and CSS — no dependencies, no bundler. Manifest V3.
 
-## Contribuire
+## Contributing
 
-Pull request benvenute. Il codice è volutamente semplice (nessun framework) per restare facile da leggere e modificare.
+Pull requests welcome. The code is intentionally simple (no framework) to stay easy to read and modify.
 
-## Licenza
+## License
 
-MIT — vedi [LICENSE](./LICENSE).
+MIT — see [LICENSE](./LICENSE).
