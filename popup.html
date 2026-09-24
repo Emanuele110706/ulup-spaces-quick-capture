@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>UluP Spaces — Quick Capture</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <img src="icons/icon48.png" alt="" width="20" height="20" />
+    <span>Quick Capture</span>
+  </header>
+
+  <!-- Stato: nessuna API key configurata -->
+  <section id="state-no-key" class="state" hidden>
+    <p>Devi collegare la tua chiave API di UluP Spaces prima di poter salvare pagine.</p>
+    <button id="btn-open-options" class="primary">Apri impostazioni</button>
+  </section>
+
+  <!-- Stato: caricamento progetti -->
+  <section id="state-loading" class="state" hidden>
+    <div class="spinner"></div>
+    <p class="muted">Carico i tuoi progetti…</p>
+  </section>
+
+  <!-- Stato: errore -->
+  <section id="state-error" class="state" hidden>
+    <p id="error-message" class="error"></p>
+    <button id="btn-retry" class="secondary">Riprova</button>
+    <button id="btn-open-options-2" class="link">Controlla la chiave API</button>
+  </section>
+
+  <!-- Stato: form principale -->
+  <section id="state-form" class="state" hidden>
+    <label for="project-select">Progetto</label>
+    <select id="project-select"></select>
+
+    <label for="name-input">Nome nodo</label>
+    <input id="name-input" type="text" maxlength="120" />
+
+    <label>Colore</label>
+    <div class="color-row" id="color-row">
+      <button type="button" class="swatch" data-color="blue" style="background:#5FA8FF" aria-label="Blu"></button>
+      <button type="button" class="swatch" data-color="purple" style="background:#A78BFA" aria-label="Viola"></button>
+      <button type="button" class="swatch" data-color="green" style="background:#34D399" aria-label="Verde"></button>
+    </div>
+
+    <label class="checkbox-row">
+      <input id="save-url-checkbox" type="checkbox" checked />
+      <span>Aggiungi il link della pagina come task</span>
+    </label>
+    <p id="url-preview" class="muted url-preview"></p>
+
+    <button id="btn-save" class="primary">Salva in UluP Spaces</button>
+  </section>
+
+  <!-- Stato: successo -->
+  <section id="state-success" class="state" hidden>
+    <div class="check">✓</div>
+    <p id="success-message">Nodo salvato.</p>
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>

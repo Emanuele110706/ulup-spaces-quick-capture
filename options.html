@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>UluP Spaces — Quick Capture — Impostazioni</title>
+  <style>
+    body {
+      background: #0A0A0C;
+      color: #F2F1F5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+      max-width: 480px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h1 img {
+      border-radius: 6px;
+    }
+    p {
+      color: #8B8991;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    a {
+      color: #5FA8FF;
+    }
+    label {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #8B8991;
+      margin: 18px 0 6px;
+    }
+    input {
+      width: 100%;
+      background: #16151A;
+      border: 1px solid #2A2830;
+      border-radius: 8px;
+      color: #F2F1F5;
+      padding: 10px 12px;
+      font-size: 13px;
+      outline: none;
+      box-sizing: border-box;
+    }
+    input:focus {
+      border-color: #5FA8FF;
+    }
+    button {
+      margin-top: 16px;
+      background: #2F6BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #4C7FFF;
+    }
+    #status {
+      margin-top: 12px;
+      font-size: 12px;
+    }
+    #status.ok { color: #34D399; }
+    #status.err { color: #F87171; }
+  </style>
+</head>
+<body>
+  <h1><img src="icons/icon48.png" width="22" height="22" alt="" /> Quick Capture</h1>
+  <p>
+    Incolla qui una chiave API generata dal tuo profilo su
+    <a href="https://ulupspaces.com/?view=profile" target="_blank">UluP Spaces → Profilo → REST API &amp; SDK</a>.
+    La chiave resta salvata solo in locale, nel tuo browser.
+  </p>
+
+  <label for="api-key">Chiave API</label>
+  <input id="api-key" type="password" placeholder="ulup_..." autocomplete="off" />
+
+  <button id="save">Salva</button>
+  <p id="status"></p>
+
+  <script src="options.js"></script>
+</body>
+</html>
